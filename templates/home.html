@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Starts image section -->
+    <div class="row justify-content-md-center mb-4">
+        <h2 class='text-primary'>Video Engagement Score Predictor</h2>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md-6" >
+            <div class="thumbnail">
+                <img src="{{url_for('static', filename='video_cut.jpg')}}" class="img-thumbnail" class="center"/>
+                <div class="caption">
+                     <p><strong> </strong></p>
+                   </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ends image section -->
+    <!-- Starts form section -->
+    <div class="form-container">
+        <form class="form-horizontal" action = "/predict/" method="post">
+        
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="cat_id">Category ID ( 1 - 50 )</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="cat_id" name="cat_id">
+              </div>
+            </div>
+            
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="age">Age</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="age" name="age">
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="gender">Gender</label>
+              <div class="col-sm-4">
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+              </div>
+            </div>
+            
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="profession">Profession</label>
+              <div class="col-sm-4">
+                  <select class="form-control" id="profession" name="profession">
+                        <option value="student">Student</option>
+                        <option value="working">Working Profession</option>
+                        <option value="others">Others</option>
+                    </select>
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="views">Views</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="views" name="views">
+              </div>
+            </div>
+            
+            <div class="form-group row justify-content-md-center">
+            <label class="control-label col-sm-2">&nbsp;</label>
+              <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Predict</button>
+              </div>
+            </div>
+          </form>
+        <!-- Ends form section -->
+    </div>
+{% endblock %}
