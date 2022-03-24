@@ -1,5 +1,7 @@
 <h2>Video Engagement Score Predictor</h2>
 
+![YT Score Predictor Screenshot](https://user-images.githubusercontent.com/92683605/159986675-16860db8-11be-4c9a-b3c8-e655ea7cf751.PNG)
+
 <h3>About the Project</h3>
 This is an application that predicts the engagement score of a video based on certain parameters like the category to which it belongs or the age of the viewer.
 This app can be used to determine whether a viewer will like a video, based on which perhaps it might be recommended to him/her. 
